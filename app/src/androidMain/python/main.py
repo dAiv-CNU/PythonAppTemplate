@@ -38,7 +38,6 @@ ctypes.CDLL(llama_path)
 
 from llama_cpp import llama
 
-
 @Composable
 def UiTestCase(text: str = "UiTestCase"):
     SimpleText(text)

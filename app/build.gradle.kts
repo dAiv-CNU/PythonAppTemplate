@@ -80,8 +80,7 @@ android {
         versionCode = 1
         versionName = version.toString()
         ndk {
-//            abiFilters += listOf("arm64-v8a", "x86_64", "armeabi-v7a", "x86")
-            abiFilters += listOf("x86_64")
+            abiFilters += listOf("arm64-v8a", "x86_64", "armeabi-v7a", "x86")
         }
     }
     packaging {
