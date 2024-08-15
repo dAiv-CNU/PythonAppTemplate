@@ -50,8 +50,11 @@ chaquopy {
             install("PyYAML")
             install("huggingface_hub")
 
-            install("jsonschema==2.6")
-            install("jupyter")
+            // Dependencies for the jupyter package.
+            install("pyzmq")
+            install("jsonschema==3.0.1")
+            install("notebook==6.4.13")
+            install("jupyterlab==2.3.2")
         }
     }
     sourceSets {
@@ -77,7 +80,8 @@ android {
         versionCode = 1
         versionName = version.toString()
         ndk {
-            abiFilters += listOf("arm64-v8a", "x86_64", "armeabi-v7a", "x86")
+//            abiFilters += listOf("arm64-v8a", "x86_64", "armeabi-v7a", "x86")
+            abiFilters += listOf("x86_64")
         }
     }
     packaging {
